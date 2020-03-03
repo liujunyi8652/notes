@@ -9,15 +9,9 @@
     </style>
 </head>
 <body>
-        <br>
-		<font id="show" size="+5">Hello!</font><br>
-        <font id="wenhou" size="+7" color="blue"> 爱梅梅宝贝，梅梅宝贝晚安！</font><br><br>
         <a href="./www/Math/index.html" title="点我查看高数" ><font size="+3"> 高等数学</font></a><br><br>
         <a href="./www/English/index.html" title="点我查看英语" ><font size="+3"> 英语</font></a><br><br>
         <a href="./www/Computer/index.html" title="点我查看计算机" ><font size="+3"> 计算机</font></a><br>
-		<a href="./www/OurStory.html">
-        <img id="img" src="./www/Emoji/goodnight.jpg" width="225" height="225" alt="图片加载失败了"/>
-		</a>
 		<script>
 		window.onload=function(){
 		function times(){
@@ -26,8 +20,7 @@
 		var hour=time.getHours();
 		var minute=time.getMinutes();
 		var second=time.getSeconds();
-		document.getElementById("show").innerHTML = "宝贝"+say+",现在是"
-		+hour+":"+minute+":"+second;
+		document.getElementById("show").innerHTML = "hour+":"+minute+":"+second;
 		
 		if(hour>=5&&hour<=11)
 		{
