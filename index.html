@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<title>Welcome</title>
+    <style>
+            body{text-align:center}
+    </style>
+</head>
+<body>
+        <br>
+		<font id="show" size="+5">Hello!</font><br>
+        <font id="wenhou" size="+7" color="blue"> 爱梅梅宝贝，梅梅宝贝晚安！</font><br><br>
+        <a href="./www/Math/index.html" title="点我查看高数" ><font size="+3"> 高等数学</font></a><br><br>
+        <a href="./www/English/index.html" title="点我查看英语" ><font size="+3"> 英语</font></a><br><br>
+        <a href="./www/Computer/index.html" title="点我查看计算机" ><font size="+3"> 计算机</font></a><br>
+		<a href="./www/OurStory.html">
+        <img id="img" src="./www/Emoji/goodnight.jpg" width="225" height="225" alt="图片加载失败了"/>
+		</a>
+		<script>
+		window.onload=function(){
+		function times(){
+		var time=new Date();
+		var say=" ";
+		var hour=time.getHours();
+		var minute=time.getMinutes();
+		var second=time.getSeconds();
+		document.getElementById("show").innerHTML = "宝贝"+say+",现在是"
+		+hour+":"+minute+":"+second;
+		
+		if(hour>=5&&hour<=11)
+		{
+			document.getElementById("wenhou").innerHTML="早上好哦！又是元气满满的一天呢！";
+			document.getElementById("img").src = "./www/Emoji/zaoshanghao.jpg";
+		}
+		else if(hour>=12&&hour<=13)
+		{
+			document.getElementById("wenhou").innerHTML="中午好！一定要吃的饱饱的才有力气学习！";
+			document.getElementById("img").src = "./www/Emoji/zhenxiang.jpg";
+		}
+		else if(hour>=14&&hour<=17)
+		{
+			document.getElementById("wenhou").innerHTML="现在是下午，快抓紧时间学习吧！";
+			document.getElementById("img").src = "./www/Emoji/meiwenti.png";
+		}
+		else if(hour>=18&&hour<=22)
+		{
+			document.getElementById("wenhou").innerHTML="晚上好呀！辛苦了一天终于可以休息啦！";
+			document.getElementById("img").src = "./www/Emoji/guaiqiao.jpg";
+		}
+		else
+		{
+			document.getElementById("wenhou").innerHTML="时间不早啰！快快洗漱上床咯！";
+			
+			document.getElementById("img").src = "./www/Emoji/wanan.jpg";
+		}
+		
+		setInterval(times,1000);
+		}
+		times();
+		}
+		
+		</script>
+</body>
+</html>
